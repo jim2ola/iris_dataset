@@ -58,7 +58,7 @@ if __name__ == '__main__':
 	# check feature importances
 	importance = list(zip(features.columns.values, model.feature_importances_))
 	print("\nFeatures Importance:")
-	print(sorted(importance, reverse=False))
+	print(sorted(importance, key = lambda x: x[1]))
 
 	end_time = time.time()
 
