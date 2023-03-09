@@ -47,7 +47,7 @@ if __name__ == '__main__':
 	sc.fit(features)
 	features_std = pd.DataFrame(sc.transform(features))
 
-	# check features correlation
+	# check features skewness
 	print("\nFeatures Skewness:")
 	print(features.skew())
 
