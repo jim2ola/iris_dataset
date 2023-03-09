@@ -47,10 +47,10 @@ if __name__ == '__main__':
 	df[df.columns[4]] = encoded_Species
 
 	# drop features SepalLengthCm and SepalWidthCm
-	df = df.drop(columns=['SepalLengthCm', 'SepalWidthCm'])
+	df = df.drop(columns=['SepalLengthCm', 'SepalWidthCm', 'PetalWidthCm'])
 
-	features = df.iloc[:, [0, 1]]
-	groundtruth = np.ravel(df.iloc[:, [2]])
+	features = df.iloc[:, [0]]
+	groundtruth = np.ravel(df.iloc[:, [1]])
 
 	# scale features
 	sc = StandardScaler()
@@ -58,7 +58,7 @@ if __name__ == '__main__':
 	features_std = pd.DataFrame(sc.transform(features))
 
 	# split dataset
-	X_train, X_test, Y_train, Y_test = train_test_split(features_std, groundtruth, test_size=0.3, random_state=2, stratify=groundtruth)
+	X_train, X_test, Y_train, Y_test = train_test_split(features_std, groundtruth, test_size=0.3, random_state=0, stratify=groundtruth)
 
 	# predict
 	logistic_regression(X_train, X_test, Y_train, Y_test)
