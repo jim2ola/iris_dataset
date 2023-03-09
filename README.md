@@ -2,7 +2,7 @@
 
 ## Iris_Dataset_Analysis
 
-This project demonstrates data analysis of the iris dataset using **Python**. We will be doing classification by supervised machine learning algorithm - Logistic Regression.
+This project demonstrates advanced data analysis of the iris dataset using **Python**. We will be doing classification by supervised machine learning algorithm - Logistic Regression.
 
 ### Problem Statement
 
