@@ -60,4 +60,4 @@ cd processors
 python predict.py
 ```
 
-<img src="/assets/images/predict.png">
+<img src="/assets/images/prediction.png">
