@@ -14,7 +14,7 @@ This dataset consists of the physical parameters of three species of flower - Ve
 
 In this data exploration, we retrieved crucial information such as skewness, correlation and even feature importances by XGBoostRegressor to help us made informed choices. In the end, we decided to keep only PetalLengthCm and PetalWidthCm for our prediction.
 
-<img src="/assets/images/analysis.jpg">
+<img src="/assets/images/analysis.png">
 
 #### To Run Analysis
 ```code
@@ -60,4 +60,4 @@ cd processors
 python predict.py
 ```
 
-<img src="/assets/images/predict.jpg">
+<img src="/assets/images/predict.png">
