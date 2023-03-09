@@ -1,6 +1,6 @@
 [![iris-flower-dataset-analysis](https://github.com/jim2ola/iris_dataset/actions/workflows/main.yml/badge.svg)](https://github.com/jim2ola/iris_dataset/actions/workflows/main.yml)
 
-## Iris_Dataset
+## Iris_Dataset_Analysis
 
 This project demonstrates data analysis of the iris dataset using **Python**. We will be doing classification by supervised machine learning algorithm - Logistic Regression.
 
