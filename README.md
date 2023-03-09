@@ -38,7 +38,7 @@ python3 -m venv ~/.iris-flower-data-analytics
 source ~/.iris-flower-data-analytics/bin/activate
 ```
 
-#### Git Clone this repository
+#### Git Clone This Repository
 ```code
 git clone https://github.com/jim2ola/iris_dataset.git
 ```
