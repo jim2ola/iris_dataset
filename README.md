@@ -12,7 +12,7 @@ This dataset consists of the physical parameters of three species of flower - Ve
 
 ### Advanced Data Analysis (Python)
 
-In this data exploration, we retrieved crucial information such as skewness, correlation and even feature importances by XGBoostRegressor to help us made informed choices. In the end, we decided to keep only PetalLengthCm for our prediction.
+In this data exploration, we retrieved crucial information such as skewness, correlation and even feature importances by XGBClassifier to help us made informed choices. In the end, we decided to keep only PetalLengthCm for our prediction.
 
 <img src="/assets/images/analysis.png">
 
