@@ -10,6 +10,26 @@ This dataset consists of the physical parameters of three species of flower - Ve
 
 -------
 
+### Data Exploration
+
+We will visualise the data using Tableau, an end-to-end data analytics platform that let us prepare, analyse, combine, and share our insights.
+
+#### Visualization I
+
+The pie chart clearly illustrates that there are 50 data points for each iris species (Versicolor, Setosa, Virginica) and a total of 150 data points.
+
+Using bivariate analysis, we explore the concept of relationship between the 4 features with scatterplots. Filtered by species, we observe that both Petal length and Petal width have higher correlation to Species. We also observe that the Iris-Setosa is clearly distinct while Iris-Versicolor and Iris-Virginica have some intersections.
+
+<img src="/assets/images/piechart_scatterplots.png">
+
+#### Visualization II
+
+The histogram address the same points as above.
+
+<img src="/assets/images/histogram.png">
+
+-------
+
 ### Advanced Data Analysis (Python)
 
 In this data exploration, we retrieved crucial information such as skewness, correlation and even feature importances by XGBoostRegressor to help us made informed choices. In the end, we decided to keep only PetalLengthCm for our prediction.
