@@ -2,7 +2,7 @@
 
 ## Iris_Dataset_Analysis
 
-This project demonstrates data analysis of the iris dataset using **Python**. We will be doing classification by supervised machine learning algorithm - Logistic Regression.
+This project demonstrates advanced data analysis of the iris dataset using **Python**. We will be doing classification by supervised machine learning algorithm - Logistic Regression.
 
 ### Problem Statement
 
@@ -32,7 +32,7 @@ The histogram address the same points as above.
 
 ### Advanced Data Analysis (Python)
 
-In this data exploration, we retrieved crucial information such as skewness, correlation and even feature importances by XGBoostRegressor to help us made informed choices. In the end, we decided to keep only PetalLengthCm for our prediction.
+In this data exploration, we retrieved crucial information such as skewness, correlation and even feature importances by XGBClassifier to help us made informed choices. In the end, we decided to keep only PetalLengthCm for our prediction.
 
 <img src="/assets/images/analysis.png">
 
