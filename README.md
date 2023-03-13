@@ -2,7 +2,7 @@
 
 ## Iris_Dataset_Analysis
 
-This project demonstrates advanced data analysis of the iris dataset using **Python**. We will be doing classification by supervised machine learning algorithm - Logistic Regression.
+This project demonstrates advanced data analysis of the iris dataset using **Python**. We will be doing classification by supervised machine learning algorithm - Logistic Regression and unsupervised machine learning algorithm - Kmeans Clustering.
 
 ### Problem Statement
 
@@ -70,14 +70,26 @@ Make install
 
 -------
 
-### Prediction
+### Prediction (Supervised)
 
-As mentioned above, we will be using **Logistic Regression** for the demonstration of classifying the iris dataset. We will also be using some common machine learning metrics that will help us gauge the performance of our model. In the end, we achieved a model accuracy of 100% in 0.0156s runtime.
+As mentioned above, we will be using **Logistic Regression** for the demonstration of classifying the iris dataset. We will also be using some common machine learning metrics that will help us gauge the performance of our model. In the end, we achieved a model accuracy of 100% in 0.0156s runtime with only PetalLengthCm.
 
 #### To Run Prediction
 ```code
 cd processors
-python predict.py
+python predict_supervised.py
 ```
 
-<img src="/assets/images/prediction.png">
+<img src="/assets/images/prediction1.png">
+
+### Prediction (Unsupervised)
+
+As mentioned above, we will be using **Kmeans Clustering** for the demonstration of classifying the iris dataset. We will also be using some common machine learning metrics that will help us gauge the performance of our model. In the end, we achieved a model accuracy of 100% in 0.0156s runtime with only PetalLengthCm.
+
+#### To Run Prediction
+```code
+cd processors
+python predict_unsupervised.py
+```
+
+<img src="/assets/images/prediction2.png">
