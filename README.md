@@ -84,7 +84,7 @@ python predict_supervised.py
 
 ### Prediction (Unsupervised)
 
-As mentioned above, we will be using **Kmeans Clustering** for the demonstration of classifying the iris dataset. We will also be using some common machine learning metrics that will help us gauge the performance of our model. In the end, we achieved a model accuracy of 96.67% in 0.117s runtime with only PetalLengthCm. Note here that cross-validation is not suitable for this application.
+As mentioned above, we will be using **Kmeans Clustering** for the demonstration of classifying the iris dataset. We will also be using some common machine learning metrics that will help us gauge the performance of our model. In the end, we achieved a model accuracy of 96.67% in 0.117s runtime with only PetalLengthCm and PetalWidthCm. Note here that cross-validation is not suitable for this application.
 
 #### To Run Prediction
 ```code
