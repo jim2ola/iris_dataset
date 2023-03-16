@@ -72,7 +72,7 @@ Make install
 
 ### Prediction (Supervised)
 
-As mentioned above, we will be using **Logistic Regression** for the demonstration of classifying the iris dataset. We will also be using some common machine learning metrics that will help us gauge the performance of our model. In the end, we achieved a model accuracy of 100% in 0.0156s runtime with only PetalLengthCm.
+As mentioned above, we will be using **Logistic Regression** for the demonstration of classifying the iris dataset. We will also be using some common machine learning metrics that will help us gauge the performance of our model. In the end, we achieved a model accuracy of 96.67% in 0.0497s runtime with only PetalLengthCm and PetalWidthCm. Using cross-validation, we also noted that our mean accuracy is 95.83% (4.17% standard deviation).
 
 #### To Run Prediction
 ```code
@@ -84,7 +84,7 @@ python predict_supervised.py
 
 ### Prediction (Unsupervised)
 
-As mentioned above, we will be using **Kmeans Clustering** for the demonstration of classifying the iris dataset. We will also be using some common machine learning metrics that will help us gauge the performance of our model. In the end, we achieved a model accuracy of 100% in 0.110s runtime with only PetalLengthCm.
+As mentioned above, we will be using **Kmeans Clustering** for the demonstration of classifying the iris dataset. We will also be using some common machine learning metrics that will help us gauge the performance of our model. In the end, we achieved a model accuracy of 96.67% in 0.117s runtime with only PetalLengthCm. Note here that cross-validation is not suitable for this application.
 
 #### To Run Prediction
 ```code

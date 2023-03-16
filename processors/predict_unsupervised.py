@@ -47,10 +47,10 @@ if __name__ == '__main__':
 	df[df.columns[4]] = encoded_Species
 
 	# drop features SepalLengthCm and SepalWidthCm
-	df = df.drop(columns=['SepalLengthCm', 'SepalWidthCm', 'PetalWidthCm'])
+	df = df.drop(columns=['SepalLengthCm', 'SepalWidthCm'])
 
-	features = df.iloc[:, [0]]
-	groundtruth = np.ravel(df.iloc[:, [1]])
+	features = df.iloc[:, [0, 1]]
+	groundtruth = np.ravel(df.iloc[:, [2]])
 
 	# scale features
 	sc = StandardScaler()

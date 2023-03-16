@@ -9,6 +9,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import KFold, cross_val_score
 
 def evaluation_report(Y_test, Y_predict):
 	# Use metrics.accuracy_score to measure the score
@@ -17,7 +18,7 @@ def evaluation_report(Y_test, Y_predict):
 
 
 def logistic_regression(X_train, X_test, Y_train, Y_test):
-	lr = LogisticRegression(C=100, random_state=0)
+	lr = LogisticRegression(C=1, solver='saga', penalty='elasticnet', l1_ratio=0.5, random_state=0)
 	
 	# fit the model
 	lr.fit(X_train, Y_train)
@@ -27,6 +28,10 @@ def logistic_regression(X_train, X_test, Y_train, Y_test):
 
 	print("\nLogisticRegression Accuracy: %.2f percent" % (metrics.accuracy_score(Y_test, Y_predict) * 100))
 	evaluation_report(Y_test, Y_predict)
+
+	kfolds = KFold(n_splits=10, shuffle=True, random_state=42)
+	lr_cv = cross_val_score(lr, X_train, Y_train, cv=kfolds)
+	print("\nAccuracy: %.2f%% (%.2f%%)" % (lr_cv.mean()*100, lr_cv.std()*100))
 
 
 if __name__ == '__main__':
@@ -47,10 +52,10 @@ if __name__ == '__main__':
 	df[df.columns[4]] = encoded_Species
 
 	# drop features SepalLengthCm and SepalWidthCm
-	df = df.drop(columns=['SepalLengthCm', 'SepalWidthCm', 'PetalWidthCm'])
+	df = df.drop(columns=['SepalLengthCm', 'SepalWidthCm'])
 
-	features = df.iloc[:, [0]]
-	groundtruth = np.ravel(df.iloc[:, [1]])
+	features = df.iloc[:, [0, 1]]
+	groundtruth = np.ravel(df.iloc[:, [2]])
 
 	# scale features
 	sc = StandardScaler()
@@ -58,7 +63,7 @@ if __name__ == '__main__':
 	features_std = pd.DataFrame(sc.transform(features))
 
 	# split dataset
-	X_train, X_test, Y_train, Y_test = train_test_split(features_std, groundtruth, test_size=0.3, random_state=0, stratify=groundtruth)
+	X_train, X_test, Y_train, Y_test = train_test_split(features_std, groundtruth, test_size=0.2, random_state=0, stratify=groundtruth)
 
 	# predict
 	logistic_regression(X_train, X_test, Y_train, Y_test)
