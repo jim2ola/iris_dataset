@@ -60,7 +60,7 @@ source ~/.iris-flower-data-analytics/bin/activate
 
 #### Git Clone This Repository
 ```code
-git clone https://github.com/jim2ola/iris_dataset.git
+git clone https://github.com/jim2ola/iris_dataset_analysis.git
 ```
 
 #### Install Required Libraries
